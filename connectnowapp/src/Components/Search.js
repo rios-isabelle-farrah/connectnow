@@ -25,7 +25,7 @@ const Search = () => {
 
   return (
     <section>
-      <h1>Enter a NYC Zipcode to get connected</h1>
+      <h1>Enter a NYC Zip Code to Get Connected</h1>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
