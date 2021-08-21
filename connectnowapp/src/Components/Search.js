@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"
 
 const Search = () => {
-  const [input, setInput] = useState();
+  const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
 
   const handleChange = (e) => {
@@ -15,7 +16,7 @@ const Search = () => {
       const res = await axios.get(
         `https://data.cityofnewyork.us/resource/cuzb-dmcd.json?zip_code=${input}`
       );
-    //   console.log(res.data);
+      console.log(res.data);
       setResults(res.data);
     } catch (error) {
       console.log(error);
@@ -27,26 +28,26 @@ const Search = () => {
     <section>
       <h1>Enter a NYC Zip Code to Get Connected</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="zip_code"></label>
         <input
+          id="zip_code"
           onChange={handleChange}
           value={input}
           type="text"
-          placeholder="Enter NYC Zipcode"
+          placeholder="NYC Zip Code"
         />
         <button>Search</button>
       </form>
       <ul>
         {results.map((resultObj) => {
           return (
-            <div>
-                {/* {resultObj.zip_code ?  */}
+            <div key={resultObj.oid}>
               <li>
-                {resultObj.location_name}, {resultObj.address}, {resultObj.city}
-                , {resultObj.state} {resultObj.zip_code}
+                <Link to={`/location/${resultObj.oid}`}>
+               {resultObj.operator_name}: {resultObj.location_name}, {resultObj.address}, {resultObj.city}
+                , {resultObj.state} {resultObj.zip_code} </Link>
               </li>
               <br /> 
-              {/* : "Sorry! We don't service this area."
-            } */}
             </div>
           );
         })}
