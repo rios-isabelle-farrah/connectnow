@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import axios from "axios";
 import CheckChoices from "./CheckChoices"
+import DisplayMap from "./DisplayMap";
 import "../Styles/Search.css"
 let urlString = ""
 let zipString = ""
@@ -81,7 +82,8 @@ console.log(urlString)
           );
         })}
       </ul>
-     
+      <DisplayMap results={results} />
+   
     </section>
   );
 };
