@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import "../Styles/LocationDetails.css"
 
 const LocationDetails = () => {
   const [location, setLocation] = useState([]);
@@ -23,7 +24,7 @@ const LocationDetails = () => {
 
   return (
     <section>
-      <h1>{location.operator_name}</h1>
+     <div className="show-route"> <h1>{location.operator_name}</h1>
       <h1>{location.location_name}</h1>
       <h2>
         {location.address}, {location.city}, {location.state}{" "}
@@ -31,37 +32,58 @@ const LocationDetails = () => {
       </h2>
       <a href={location.url} target="_blank" rel="noreferrer">
         <button>Website</button>
-      </a>
+      </a></div>
+
+
       <h3>Hours Of Operation</h3>
-      <p>
-        Monday: {location.mon_open} - {location.mon_close}
-      </p>
-      <p>
-        Tuesday: {location.tue_open} - {location.tue_close}
-      </p>
-      <p>
-        Wednesday: {location.wed_open} - {location.wed_close}
-      </p>
-      <p>
-        Thursday: {location.thu_open} - {location.thu_close}
-      </p>
-      <p>
-        Friday: {location.fri_open} - {location.fri_close}
-      </p>
-      <p>
-        Saturday: {location.sat_open} - {location.sat_close}
-      </p>
-      <p>
-        Sunday: {location.sun_open} - {location.sun_close}
-      </p>
-      <p>Wi-Fi Available: {location.wi_fi_available ? "Yes" : "No"}</p>
+
+
+<table>
+  <thead>
+  <tr>
+
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+
+  </tr>
+  </thead>
+  <thead>
+  <tr>
+    <td>{location.mon_open} - {location.mon_close}</td>
+    <td>{location.tue_open} - {location.tue_close}</td>
+    <td>{location.wed_open} - {location.wed_close}</td>
+    <td>{location.thu_open} - {location.thu_close}</td>
+    <td>{location.fri_open} - {location.fri_close}</td>
+    <td>{location.sat_open} - {location.sat_close}</td>
+    <td>{location.sun_open} - {location.sun_close}</td>
+
+
+  </tr>
+  </thead>
+ 
+ 
+</table>
+
+
+<br></br>
+
+
+
+
+
+<div className="bottom-div">      <p>Wi-Fi Available: {location.wi_fi_available ? "Yes" : "No"}</p>
       <p>Work Stations: {location.workstation}</p>
       <p>Other Equipment: {location.supplementary_equipment}</p>
       <p>
         Wheelchair Accessibility:{" "}
         {location.wheelchair_accessible === "Y" ? "Yes" : "No"}
       </p>
-      <p>Access Requirements: {location.access_requirements}</p>
+      <p>Access Requirements: {location.access_requirements}</p></div>
     </section>
   );
 };

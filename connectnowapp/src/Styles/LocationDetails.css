@@ -1,0 +1,24 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+margin-left:15%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .show-route{
+      display:block;
+  }
+
+  .bottom-div{
+      text-align:left;
+      /* border: 2px grey solid; */
+      width:50%;
+      margin-left: 25%;
+      font-size:20px;
+  }

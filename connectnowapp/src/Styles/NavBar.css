@@ -1,0 +1,31 @@
+.logo-image{
+    height: 200px;
+    width: 350px;
+}
+
+.nav-div{
+    width: 100%;
+    background-color: lightgray;
+    border:black solid 20px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+
+    
+    
+    
+    
+;
+}
+
+
+.about-us{
+    font-size: 50px;
+    font-family:monospace;
+    text-decoration: none;
+    color:black;
+}
+.about-us:focus, .about-us:hover, .about-us:visited, .about-us:link, .about-us:active {
+    text-decoration: none;
+}
