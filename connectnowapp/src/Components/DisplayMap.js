@@ -2,6 +2,7 @@ import React from 'react'
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps"
 import { useState } from "react";
 import { useHistory } from "react-router";
+import "../Styles/DisplayMap.css"
 
 function DisplayMap({ results }) {
     const [lattitude, setLattitude] = useState(40.713051);

@@ -1,4 +1,4 @@
-.logo-image{
+ .logo-image{
     height: 200px;
     width: 350px;
 }
@@ -28,4 +28,10 @@
 }
 .about-us:focus, .about-us:hover, .about-us:visited, .about-us:link, .about-us:active {
     text-decoration: none;
-}
+} 
+
+/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.header-font{
+    font-family:'Press Start 2P', cursive;
+    font-size: 25px;
+} */

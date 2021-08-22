@@ -57,6 +57,7 @@ const Search = () => {
         <button className="search-button"> Connect </button>
       <CheckChoices queryString={queryString}/>
       </form>
+      <section className="map-and-locales">
       <ul className="ul-locations">
         {results.map((resultObj) => {
           return (
@@ -74,6 +75,8 @@ const Search = () => {
         })}
       </ul>
       <DisplayMap results={results} />
+      </section>
+
     </section>
   );
 };
