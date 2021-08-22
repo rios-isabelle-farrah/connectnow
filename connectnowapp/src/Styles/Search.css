@@ -10,10 +10,24 @@
 
 .zip-input{
     width:200px;
+    height:50px;
+    font-size:18px;
+    text-align: center;
+}
+.search-button{
+    width:100px;
+    height:55px;
+    font-size:18px;
+    font-weight: bold;
 }
 .ul-locations{
     list-style:none;
+    text-align: left;
+    width: 30%;
+float:left;
+border:solid 2px black
 }
 .location{
     list-style:none;
 }
+
