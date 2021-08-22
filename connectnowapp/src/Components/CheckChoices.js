@@ -33,9 +33,9 @@ export default function App({input,queryString,zip}) {
 
   return (
     <div className="App">
-      <h3>Select Filters</h3>
+      <h3 className="filter-title">Select Filters</h3>
       <ul className="query-list">
-        {toppings.map(({ name, price }, index) => {
+        {toppings.map(({ name, price,image,displayName }, index) => {
           return (
             <li key={index}>
               <div className="toppings-list-item">
@@ -49,9 +49,11 @@ export default function App({input,queryString,zip}) {
                     checked={checkedState[index]}
                     onChange={() => handleOnChange(index)}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                  <img className="wifi-image" src={image}></img>
+                  <label htmlFor={`custom-checkbox-${index}`}>{displayName}</label>
                 </div>
                 <div className="right-section">{price}</div>
+                
               </div>
             </li>
           );

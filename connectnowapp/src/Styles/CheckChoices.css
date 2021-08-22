@@ -1,5 +1,5 @@
 .query-list{
-    border:black 4px solid;
+    /* border:black 4px solid; */
     width:80%;
     height: 20%;
     list-style: none;
@@ -12,8 +12,16 @@
 
   .check-box{
       width: 40px;
-      height: 40px;
+      height: 30px;
       border:3px;
 
 
+  }
+
+  .wifi-image{
+      height:60px;
+      width: 60px;
+  }
+  .filter-title{
+      font-size: 30px;
   }

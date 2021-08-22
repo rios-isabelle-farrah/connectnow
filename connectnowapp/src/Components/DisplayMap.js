@@ -2,6 +2,7 @@ import React from 'react'
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from "react-google-maps"
 import { useState } from "react";
 import { useHistory } from "react-router";
+import "../Styles/DisplayMap.css"
 
 function DisplayMap({ results }) {
     const [lattitude, setLattitude] = useState(40.713051);
@@ -77,7 +78,7 @@ function DisplayMap({ results }) {
     return (
         <div className="maps">
             <WrappedMap
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCSMeyj4s7hgXFc41OQekrDi8fUCoEKKeI`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `100%` }} />}
                 mapElement={<div style={{ height: `100%` }} />}

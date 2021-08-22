@@ -1,15 +1,23 @@
 export const toppings = 
 [{
   name: 'wi_fi_available',
-  value: true
+  displayName: 'Wi-Fi',
+  value: true,
+  image: "https://cdn4.iconfinder.com/data/icons/vecico-connectivity/288/wifi_Symbol-512.png"
+
 },{
   name: 'os_accessibility_features',
-  value:true
+  displayName: 'Accessible Computer Screens',
+  value:true,
+  image: "https://freepngimg.com/thumb/pc/29455-9-computer-monitor-screen.png"
 },
 {
   name: 'wheelchair_accessible',
   
-  value:'Y'
+  displayName: 'Wheelchair Access',
+  value:'Y',
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wheelchair_symbol.svg/210px-Wheelchair_symbol.svg.png"
+
 }
 
 
