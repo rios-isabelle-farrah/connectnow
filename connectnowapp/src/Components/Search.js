@@ -23,8 +23,8 @@ const Search = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(input.length !== 5){
-      alert('Zip code is not valid.')
+    if (input.length !== 5) {
+      alert("Zip code is not valid.");
     }
     zipString = "&zip_code=" + input;
     console.log("zip", zipString);
@@ -55,28 +55,30 @@ const Search = () => {
           placeholder="NYC Zip Code"
         />
         <button className="search-button"> Connect </button>
-      <CheckChoices queryString={queryString}/>
+        <CheckChoices queryString={queryString} />
       </form>
       <section className="map-and-locales">
-      <ul className="ul-locations">
-        {results.map((resultObj) => {
-          return (
-            <div key={resultObj.oid}>
-              <li className="location">
-                <Link style={{ textDecoration: 'none' }} to={`/location/${resultObj.oid}`}>
-                  {resultObj.operator_name}: {resultObj.location_name},{" "}
-                  {resultObj.address}, {resultObj.city}, {resultObj.state}{" "}
-                  {resultObj.zip_code}{" "}
-                </Link>
-              </li>
-              <br />
-            </div>
-          );
-        })}
-      </ul>
-      <DisplayMap results={results} />
+        <ul className="ul-locations">
+          {results.map((resultObj) => {
+            return (
+              <div key={resultObj.oid}>
+                <li className="location">
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    to={`/location/${resultObj.oid}`}
+                  >
+                    {resultObj.operator_name}: {resultObj.location_name},{" "}
+                    {resultObj.address}, {resultObj.city}, {resultObj.state}{" "}
+                    {resultObj.zip_code}{" "}
+                  </Link>
+                </li>
+                <br />
+              </div>
+            );
+          })}
+        </ul>
+        <DisplayMap results={results} />
       </section>
-
     </section>
   );
 };
