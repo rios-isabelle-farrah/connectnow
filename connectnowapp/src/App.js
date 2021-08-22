@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import LocationDetails from "./Components/LocationDetails";
 
@@ -17,7 +16,6 @@ function App() {
             <Route path="/location/:id" component={LocationDetails} />
           </Switch>
         </main>
-      
       </Router>
     </div>
   );

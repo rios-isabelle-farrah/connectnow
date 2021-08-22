@@ -45,10 +45,10 @@ const Search = () => {
     <section>
       <h1 className="enter-zip">Enter a NYC Zip Code to Get Connected</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="zip_code"></label>
+        <label htmlFor="input"></label>
         <input
           className="zip-input"
-          id="zip_code"
+          id="input"
           onChange={handleChange}
           value={input}
           type="text"
@@ -61,7 +61,7 @@ const Search = () => {
       <ul className="ul-locations">
         {results.map((resultObj) => {
           return (
-            <div>
+            <div key={resultObj.oid}>
               <li className="location">
                 <Link style={{ textDecoration: 'none' }} to={`/location/${resultObj.oid}`}>
                   {resultObj.operator_name}: {resultObj.location_name},{" "}

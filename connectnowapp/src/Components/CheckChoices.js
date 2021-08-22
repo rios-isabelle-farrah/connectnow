@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { toppings } from "../Utils";
-import "../Styles/CheckChoices.css"
+import "../Styles/CheckChoices.css";
 
-export default function App({input,queryString,zip}) {
-
+export default function App({ input, queryString, zip }) {
   const [checkedState, setCheckedState] = useState(
     new Array(toppings.length).fill(false)
   );
@@ -28,20 +27,20 @@ export default function App({input,queryString,zip}) {
     );
 
     setTotal(totalPrice);
-    queryString(total)
+    queryString(total);
   };
 
   return (
     <div className="App">
       <h3 className="filter-title">Select Filters</h3>
       <ul className="query-list">
-        {toppings.map(({ name, price,image,displayName }, index) => {
+        {toppings.map(({ name, price, image, displayName }, index) => {
           return (
             <li key={index}>
               <div className="toppings-list-item">
                 <div className="left-section">
                   <input
-                  className="check-box"
+                    className="check-box"
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
                     name={name}
@@ -49,18 +48,18 @@ export default function App({input,queryString,zip}) {
                     checked={checkedState[index]}
                     onChange={() => handleOnChange(index)}
                   />
-                  <img className="wifi-image" src={image}></img>
-                  <label htmlFor={`custom-checkbox-${index}`}>{displayName}</label>
+                  <img className="wifi-image" src={image} alt="wifi" />
+                  <label htmlFor={`custom-checkbox-${index}`}>
+                    {displayName}
+                  </label>
                 </div>
                 <div className="right-section">{price}</div>
-                
               </div>
             </li>
           );
         })}
         <li>
-          <div className="toppings-list-item">
-      </div>
+          <div className="toppings-list-item"></div>
         </li>
       </ul>
     </div>
