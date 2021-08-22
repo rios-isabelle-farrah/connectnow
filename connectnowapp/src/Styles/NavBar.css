@@ -1,32 +1,28 @@
- .logo-image{
-    height: 200px;
-    width: 350px;
+.logo-image {
+  height: 200px;
+  width: 350px;
 }
 
-.nav-div{
-    width: 100%;
-    background-color: #205493;
-    /* border:black solid 20px; */
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 6%;
-
-    
-    
-    
-    
-;
+.nav-div {
+  width: 100%;
+  background-color: #205493;
+  /* border:black solid 20px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6%;
 }
 
-
-.about-us{
-    font-size: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color:white;
+.about-us {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
 }
-.about-us:focus, .about-us:hover, .about-us:visited, .about-us:link, .about-us:active {
-    text-decoration: none;
-} 
-
+.about-us:focus,
+.about-us:hover,
+.about-us:visited,
+.about-us:link,
+.about-us:active {
+  text-decoration: none;
+}
