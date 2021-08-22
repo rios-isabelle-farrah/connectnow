@@ -33,7 +33,7 @@ export default function App({input,queryString,zip}) {
 
   return (
     <div className="App">
-      <h3>Select Filters</h3>
+      <h3 className="filter-title">Select Filters</h3>
       <ul className="query-list">
         {toppings.map(({ name, price,image,displayName }, index) => {
           return (

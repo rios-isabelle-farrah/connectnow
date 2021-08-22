@@ -5,12 +5,12 @@
 
 .nav-div{
     width: 100%;
-    background-color: lightgray;
-    border:black solid 20px;
+    background-color: #205493;
+    /* border:black solid 20px; */
     display:flex;
     justify-content: space-around;
     align-items: center;
-    height: 10%;
+    height: 6%;
 
     
     
@@ -22,16 +22,11 @@
 
 .about-us{
     font-size: 50px;
-    font-family:monospace;
+    font-family:Arial, Helvetica, sans-serif;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 .about-us:focus, .about-us:hover, .about-us:visited, .about-us:link, .about-us:active {
     text-decoration: none;
 } 
 
-/* @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-.header-font{
-    font-family:'Press Start 2P', cursive;
-    font-size: 25px;
-} */

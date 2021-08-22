@@ -63,7 +63,7 @@ const Search = () => {
           return (
             <div>
               <li className="location">
-                <Link to={`/location/${resultObj.oid}`}>
+                <Link style={{ textDecoration: 'none' }} to={`/location/${resultObj.oid}`}>
                   {resultObj.operator_name}: {resultObj.location_name},{" "}
                   {resultObj.address}, {resultObj.city}, {resultObj.state}{" "}
                   {resultObj.zip_code}{" "}
