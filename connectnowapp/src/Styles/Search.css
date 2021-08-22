@@ -1,0 +1,19 @@
+.check-form{
+    border: solid 4px black;
+    background-color: lightblue;
+    height: 80px;
+    width: 20%;
+    margin-left:40%
+
+}
+
+
+.zip-input{
+    width:200px;
+}
+.ul-locations{
+    list-style:none;
+}
+.location{
+    list-style:none;
+}
