@@ -56,7 +56,9 @@ console.log(urlString)
       <CheckChoices queryString={queryString} />
       <h1 className="enter-zip">Enter a NYC Zipcode to get connected</h1>
       <form onSubmit={handleSubmit}>
+      <label htmlFor="zip_code"></label>
         <input className="zip-input"
+        id="zip_code"
           onChange={handleChange}
           value={input}
           type="text"

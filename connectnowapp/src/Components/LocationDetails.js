@@ -39,7 +39,9 @@ const LocationDetails = () => {
 
 
 <table>
+  <thead>
   <tr>
+
     <th>Monday</th>
     <th>Tuesday</th>
     <th>Wednesday</th>
@@ -49,6 +51,8 @@ const LocationDetails = () => {
     <th>Sunday</th>
 
   </tr>
+  </thead>
+  <thead>
   <tr>
     <td>{location.mon_open} - {location.mon_close}</td>
     <td>{location.tue_open} - {location.tue_close}</td>
@@ -60,10 +64,11 @@ const LocationDetails = () => {
 
 
   </tr>
-
+  </thead>
  
  
 </table>
+
 
 <br></br>
 
